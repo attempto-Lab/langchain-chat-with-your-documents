@@ -19,8 +19,15 @@ pipenv install
 
 ### Run
 
-You can either start a `pipenv shell` and use `python docchat_streamlit`
-or run the following command:
+You can launch a subshell in the virtual environment with `pipenv shell`:
+```
+pipenv shell
+
+export OPENAI_API_KEY=<YOUR_API_KEY>
+streamlit run docchat_streamlit_ui.py`
+```
+
+Alternatively you can use `pipenv run` to execute streamlit in the virtual environment:
 ```
 export OPENAI_API_KEY=<YOUR_API_KEY>
 pipenv run streamlit run docchat_streamlit_ui.py
